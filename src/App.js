@@ -4,14 +4,15 @@ const baseUrl = "https://live11.akt.hotstar-cdn.net/hls/live/2003689/ipl2019/eng
 class App extends React.Component {
   constructor(){
     super();
-    this.onChange = this.onChange.bind(this);
+    // this.onChange = this.onChange.bind(this);
     this.onClick = this.onClick.bind(this);
     this.goLive = this.goLive.bind(this);
     this.matchNo = React.createRef();
     this.date = React.createRef();
     this.month = React.createRef();
     this.state = {
-      url: ''
+      url: '',
+      quality: 5
     };
   }
   componentDidMount(){
@@ -53,11 +54,12 @@ class App extends React.Component {
       this.goLive();
     }
   }
-  onChange(e){
-    this.setState({
-      [e.target.name]: e.target.value 
-    });
-  }
+  // onChange(e){
+  //   this.setState((state) => ({
+  //     [e.target.name]: e.target.value,
+  //     url: state.url.substring(0,state.url.length-6)+e.target.value+".m3u8"
+  //   }));
+  // }
   render() {
     const date = [];
     for(let i=1;i<=31;i++){
@@ -83,6 +85,13 @@ class App extends React.Component {
           <option value='march'>March</option>
           <option value='april'>April</option>
         </select>
+        {/* Quality(5 is 1080p)<select type="text" name="quality" value={this.state.quality} onChange={this.onChange}>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+        </select> */}
         <button name="load" onClick={this.onClick}>Load this match</button>
         <button name="goLive" onClick={this.onClick}>GO LIVE</button>
       <ReactHLS url={this.state.url} autoplay fullscreen/>
