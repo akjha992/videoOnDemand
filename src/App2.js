@@ -1,10 +1,17 @@
 import React from "react";
 import ReactHLS from 'react-hls';
-import styles from './index.css';
+import desktop from './desktop.css';
+import phone from './phone.css';
+import MQ from 'react-responsive';
 const baseUrl = {
   hin: "https://live12.akt.hotstar-cdn.net/hls/live/2003697/ipl2019/hin/fulldvrm0",
   eng: "https://live11.akt.hotstar-cdn.net/hls/live/2003689/ipl2019/eng/fulldvrm0"
 };
+const breakpoints = {
+  desktop: '(min-width: 1025px)',
+  tablet: '(min-width: 768px) and (max-width: 1024px)',
+  phone: '(max-width: 767px)',
+ };
 class App extends React.Component {
   constructor(){
     super();
@@ -40,25 +47,48 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.sideBar}>
-        <label className={styles.label}>Select Language</label>
-              <select className={styles['select-css']} name="language" ref={this.language} defaultValue='eng'>
-                <option value='eng'>English</option>
-                <option value='hin'>Hindi</option>
+        <MQ query={breakpoints.desktop}>
+          <div className={desktop.sideBar}>
+          <label className={desktop.label}>Select Language</label>
+                <select className={desktop['select-css']} name="language" ref={this.language} defaultValue='eng'>
+                  <option value='eng'>English</option>
+                  <option value='hin'>Hindi</option>
+                </select>
+              <label className={desktop.label}>Select Quality</label>
+              <select className={desktop['select-css']} name="quality" ref={this.quality} defaultValue='1'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
               </select>
-            <label className={styles.label}>Select Quality</label>
-            <select className={styles['select-css']} name="quality" ref={this.quality} defaultValue='1'>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-            </select>
-            <button className={styles.button} onClick={this.load}>LOAD</button>
-        </div>
-        <div className={styles.mainBody} hidden={!this.state.loaded}>
-          <ReactHLS hidden={!this.state.loaded} width={800} height={600} url={this.state.url} autoplay/>
-        </div>
+              <button className={desktop.button} onClick={this.load}>LOAD</button>
+          </div>
+          <div className={desktop.mainBody}>
+            <ReactHLS width={800} height={600} url={this.state.url} autoplay/>
+          </div>
+        </MQ>
+        <MQ query={breakpoints.phone}>
+          <div className={phone.mainBody}>
+            <ReactHLS width={window.innerWidth} height={200} url={this.state.url} autoplay/>
+          </div>
+          <div className={phone.sideBar}>
+          <label className={phone.label}>Select Language</label>
+                <select className={desktop['select-css']} name="language" ref={this.language} defaultValue='eng'>
+                  <option value='eng'>English</option>
+                  <option value='hin'>Hindi</option>
+                </select>
+              <label className={phone.label}>Select Quality</label>
+              <select className={phone['select-css']} name="quality" ref={this.quality} defaultValue='1'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+              <button className={phone.button} onClick={this.load}>LOAD</button>
+          </div>
+        </MQ>
       </div>
     );
   }
