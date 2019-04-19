@@ -1,14 +1,31 @@
 import React from "react";
 import ReactPlayer from 'react-player';
+import styles from './index.css';
+import { data } from './constants';
 class App extends React.Component {
   constructor(){
     super();
+    this.state = {
+      selectedIndex:'0'
+    }
+  }
+  onChange(name, value){
+    this.setState({
+      [name]: value
+    });
   }
   render() {
     return (
       <div>
-        <h3>Playing Game Of Thrones Season 8 Episode 1</h3>
-        <ReactPlayer width='100%' height='600px' controls={true} url='https://nl19.seedr.cc/ff_get/447246216/Game.of.Thrones.S08E01.Kings.Landing.1080p.WEB-HD.x264.ESub-KatmovieHD.Eu.mkv.mp4?st=fwi2cIr9z5w2F4aqqw2ihw&e=1555784428' playing />
+        <div className={styles.header}>
+        <label className={styles.selectLabel}>Playing</label>
+          <div className={styles.select}>
+              <select name="slct" id="slct" onChange={(e) => {this.onChange('selectedIndex', e.target.value)}}>
+                {data.map((item, i) => (<option value={i}>{item.name}</option>))}
+              </select>
+            </div>
+        </div>
+        <ReactPlayer width='100%' height='600px' controls={true} url={data[this.state.selectedIndex].url} playing />
       </div>
     );
   }
