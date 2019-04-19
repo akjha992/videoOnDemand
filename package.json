@@ -1,8 +1,8 @@
 {
-  "name": "poker_calc",
+  "name": "VOD",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://akjha992.github.io/liveIPL",
+  "homepage": "http://akjha992.github.io/videoOnDemand",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -37,7 +37,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.2",
     "react-hls": "0.0.8",
-    "react-player": "^1.10.0",
+    "react-player": "^1.11.0",
     "react-redux": "^5.0.7",
     "react-responsive": "^6.1.1",
     "redux": "^4.0.0",
