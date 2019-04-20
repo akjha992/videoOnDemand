@@ -1,6 +1,10 @@
 export const data = [
     {
-        name: 'GOT S08E01',
+        name: 'Friends S01E01',
+        url: 'http://79.127.126.110/Serial/Friends/S01/Friends.S01.E01.480p.mkv'
+    },
+    {
+        name: 'G̶O̶T̶ ̶S̶0̶8̶E̶0̶1̶',
         url: 'https://nl19.seedr.cc/ff_get/447246216/Game.of.Thrones.S08E01.Kings.Landing.1080p.WEB-HD.x264.ESub-KatmovieHD.Eu.mkv.mp4?st=7FlOUgs54voFbMqO94fEFQ&e=1555801071'
     },
     {
