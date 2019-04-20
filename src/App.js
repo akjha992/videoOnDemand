@@ -21,11 +21,12 @@ class App extends React.Component {
         <label className={styles.selectLabel}>Playing</label>
           <div className={styles.select}>
               <select name="slct" id="slct" onChange={(e) => {this.onChange('selectedIndex', e.target.value)}}>
-                {data.map((item, i) => (<option value={i}>{item.name}</option>))}
+                {data.map((item, i) => (<option key={i} value={i}>{item.name}</option>))}
               </select>
             </div>
         </div>
-        <ReactPlayer width='100%' height='600px' controls={true} url={data[this.state.selectedIndex].url} playing />
+        <ReactPlayer width='100%' height='600px' controls={true} url={data[this.state.selectedIndex].url} playing 
+        />
       </div>
     );
   }
