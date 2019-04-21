@@ -1,11 +1,7 @@
 export const data = [
     {
-        name: 'GOT S08E02 Leaked Leaked',
+        name: 'GOT S08E02 Leaked 480p',
         url: 'https://nl26.seedr.cc/ff_get/448151489/www.Movcr.tv.%20-Game%20of%20Thrones%20S08E02.480p.Web.x264%20-%20[MOVCR].mkv?st=eg78fEzLEX3u-vvvoCPung&e=1555965160'
-    },
-    {
-        name: 'GOT S08E02 Leaked Alternate',
-        url: 'https://nl24.seedr.cc/ff_get/448136479/Game.of.Thrones.S08E02.PRERELEASE.WEB.x264-TELLY.mkv?st=7IHfgeQ-PZjOHY_PzyMkUQ&e=1555964520'
     },
     {
         name: 'Big Bang Theory S12E09',
