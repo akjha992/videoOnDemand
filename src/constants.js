@@ -1,5 +1,9 @@
 export const data = [
     {
+        name: 'GOT S08E02 Leaked High Quality',
+        url: 'https://fr7.seedr.cc/ff_get/448136611/Game%20of%20Thrones.2019.S08E02.HDTV.x264-CMRG[TGx].avi?st=kXyXj_HOdrcg4iaVtEtYlQ&e=1555964824'
+    },
+    {
         name: 'GOT S08E02 Leaked',
         url: 'https://nl24.seedr.cc/ff_get/448136479/Game.of.Thrones.S08E02.PRERELEASE.WEB.x264-TELLY.mkv?st=7IHfgeQ-PZjOHY_PzyMkUQ&e=1555964520'
     },
