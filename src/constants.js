@@ -1,11 +1,7 @@
 export const data = [
     {
-        name: 'Friends S01E01',
-        url: 'http://79.127.126.110/Serial/Friends/S01/Friends.S01.E01.480p.mkv'
-    },
-    {
-        name: 'G̶O̶T̶ ̶S̶0̶8̶E̶0̶1̶',
-        url: 'https://nl19.seedr.cc/ff_get/447246216/Game.of.Thrones.S08E01.Kings.Landing.1080p.WEB-HD.x264.ESub-KatmovieHD.Eu.mkv.mp4?st=7FlOUgs54voFbMqO94fEFQ&e=1555801071'
+        name: 'GOT S08E02 Leaked',
+        url: 'https://nl24.seedr.cc/ff_get/448136479/Game.of.Thrones.S08E02.PRERELEASE.WEB.x264-TELLY.mkv?st=7IHfgeQ-PZjOHY_PzyMkUQ&e=1555964520'
     },
     {
         name: 'Big Bang Theory S12E09',
